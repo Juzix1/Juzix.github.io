@@ -1,109 +1,115 @@
 *{
-    box-sizing: border-box;
     margin:0;
     padding:0;
+    font-family: 'Times New Roman', Times, serif;
 }
-#container{
+.main{
     width:100%;
-    height:100%;
-    background:#1a1a34;
-}
-#login-container{
-    background:#1c1c3a;
-    color:white;
-    width:35vw;
     height:100vh;
-    box-shadow: 15px 0 50px black;
-    text-align:center;
+    position: relative;
+    overflow:hidden;
+    background: linear-gradient(to right, #9c27b0, #8ecdff);
+}
+
+nav{
+    width: 80%;
+    position: sticky;
+    margin: 20px auto;
+    z-index: 1;
+    display:flex;
     align-items: center;
 }
-.login-filler{
-    width:100%;
-    height:10vh;
-    padding-bottom:30vh;
+.logo{
+    flex-basis:20%;
 }
-.login-box{
-    text-align:left;
-    padding:5vh 5vh 5vh 5vh;
+.logo img{
+    width: 150px;
 }
-.login-box h1{
-    font-size:8vh;
-    font-weight: 100;
+.nav-links{
+    flex: 1;
+    text-align:right;
 }
-.login-box h3{
-    font-size:3vh;
-    font-weight: 100;
+.nav-links ul li{
+    list-style:none;
+    display: inline-block;
+    margin: 0 20px;
 }
-input[type=text], input[type=password]{
-    width:100%;
-    padding:12px 20px;
-    margin: 8px 0;
-    display:inline-block;
-    border:1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background:#1c1c3a;
-    color:#ccc;
-    font-weight: bold;
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;;
 }
-
-button {
-    background:#4e4ee9;
-    color:white;
-    padding:14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor:pointer;
-    width:100%;
+.information{
+    width:1000px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
-
-button:hover {
-    opacity: 0.8;
-}
-
-.cancelbtn {
-    width:auto;
-    padding: 10px 18px;
-    background:#f44336;
-}
-.imgcontainer {
-    text-align:center;
-    margin:24px 0 12px 0;
-}
-img.avatar {
-    width: 40%;
+#circle{
+    width:1000px;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
     border-radius: 50%;
-  }
-.Login-Conitainer{
-    padding: 16px;
+    background: #ccc;
 }
+.feature img{
+    width: 70px;
 
-.error{
-    color:red;
-    padding: 10px;
-    width: 95%;
-    border-radius: 5px;
-    MARGIN:20px 0;
 }
-.psw a:link{
-    text-decoration: none;
-    color:white;
+.feature {
+    position:absolute;   
+    display: flex;
+    color: #fff;
 }
-.psw a:visited{
-    text-decoration: none;
-    color:white;
+.feature div{
+    margin-left: 30px;
 }
-.psw a:hover{
-    text-decoration: none;
-    opacity: 0.86;
+.feature div p{
+    margin-top: 8px;
 }
-
-@media screen and (max-width: 300px){
-    span.psw{
-        display: block;
-        float:none;
-    }
-    .cancelbtn{
-        width:100%;
-    }
+.one{
+    top: 450px;
+    right:50px;
+}
+.two{
+    top:150px;
+    left:350px;
+}
+.three{
+    bottom: 450px;
+    left: 50px;
+}
+.four{
+    bottom: 150px;
+    right:350px;
+}
+.mobile{
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.controls{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.controls h3{
+    margin: 15px 0;
+    color: #fff;
+}
+#upBtn{
+    width: 50px;
+    cursor: pointer;
+}
+#downBtn{
+    width: 50px;
+    cursor: pointer;
+    transform: rotate(180deg);
 }
